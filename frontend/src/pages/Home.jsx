@@ -7,6 +7,7 @@ import heroImg01 from '../assets/images/hero-img01.png'
 import heroImg02 from '../assets/images/hero-img02.png'
 import heroImg03 from '../assets/images/hero-img03.png'
 import featureImg from '../assets/images/feature-img.png'
+import faqImg from '../assets/images/faq-img.png'
 import videoIcon from '../assets/images/video-icon.png'
 import avatarIcon from '../assets/images/avatar-icon.png'
 import icon01 from '../assets/images/icon01.png'
@@ -14,6 +15,8 @@ import icon02 from '../assets/images/icon02.png'
 import icon03 from '../assets/images/icon03.png'
 import { BsArrowRight } from 'react-icons/bs'
 import DoctorList from '../components/Doctors/DoctorList'
+import FaqList from '../components/Faq/FaqList'
+import Testimonial from '../components/Testimonial/Testimonial'
 
 export default function Home() {
   return (
@@ -82,7 +85,6 @@ export default function Home() {
         </section>
 
         {/* ======= HERO SECTION END========= */}
-
         <section>
           <div className="container">
             <div className='lg:w-[470px] mx-auto'>
@@ -228,9 +230,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* ======= FEATURE SECTION END========= */}
-
 
 
         {/* ======= OUR GREAT DOCTORS START ========= */}
@@ -241,14 +241,45 @@ export default function Home() {
               <p className='text_para text-center'></p>
             </div>
 
-            <DoctorList/>
+            <DoctorList />
           </div>
         </section>
-
-
-
         {/* ======= OUR GREAT DOCTORS END ========= */}
 
+
+        {/* ======= FAQ SECTION START========= */}
+        <section>
+          <div className="container">
+            <div className="flex justify-between gap-[50px] lg:gap-0 ">
+              <div className='w-1/2 hidden md:block'>
+                <img src={faqImg} alt="" />
+              </div>
+
+              <div className='w-full md:w-1/2'>
+                <h2 className='heading '>Most questions by our beloved patients</h2>
+
+                <FaqList/> 
+
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* ======= FAQ SECTION END========= */}
+
+
+
+        {/* ======= TESTIMONIAL SECTION START========= */}
+        <section>
+          <div className="container">
+            <div className="xl:w-[470px] mx-auto">
+              <h2 className='heading text-center'>What our patient say</h2>
+              <p className='text__para text-center'></p>
+            </div>
+
+            <Testimonial/> 
+          </div>
+        </section>
+        {/* ======= TESTIMONIAL SECTION END========= */}
 
 
       </>
