@@ -1,5 +1,5 @@
 import { useState } from "react"
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -50,8 +50,11 @@ const Login = () => {
           </div>
 
           <p className="mt-5 text-textColor text-center">
-            Don't have an account? <Link to='/register' className="text-primaryColor font-medium ">Register</Link>
-            </p>
+            Don't have an account?
+            <Link to='/login' className="text-primaryColor font-medium ">
+              Register
+            </Link>
+          </p>
         </form>
       </div>
     </section>
