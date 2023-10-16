@@ -18,7 +18,7 @@ import DoctorList from '../components/Doctors/DoctorList'
 import FaqList from '../components/Faq/FaqList'
 import Testimonial from '../components/Testimonial/Testimonial'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
 
@@ -287,3 +287,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home; 
