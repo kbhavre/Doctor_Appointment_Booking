@@ -53,7 +53,9 @@ const Header = () => {
 
           {/* ========== LOGO ========= */}
           <div>
-            <img src={logo} alt="" />
+            <NavLink to={"/"}>
+               <img src={logo} alt="" />
+            </NavLink>
           </div>
 
           {/* ========== MENU ========= */}

@@ -15,9 +15,9 @@ const Login = () => {
   return (
     <section className="px-5 lg:px-0">
       <div className="w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10">
-        <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10"> Hello!
-          <span className="text-primaryColor ">
-            Welcome
+        <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10 "> Hello! 
+          <span className="text-primaryColor px-2 ">
+            Welcome   
           </span>
           Back
         </h3>
@@ -51,7 +51,7 @@ const Login = () => {
 
           <p className="mt-5 text-textColor text-center">
             Don't have an account?
-            <Link to='/login' className="text-primaryColor font-medium ">
+            <Link to='/register' className="text-primaryColor font-medium ">
               Register
             </Link>
           </p>
@@ -61,4 +61,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;
