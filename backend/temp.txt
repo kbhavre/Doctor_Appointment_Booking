@@ -1,0 +1,10 @@
+mongodb atlas
+
+username = kbhavre78
+password = medibuddyappbackend
+
+current ip address = 152.58.58.150
+
+
+ayush121
+medibuddyappbackend
