@@ -3,8 +3,14 @@ mongodb atlas
 username = kbhavre78
 password = medibuddyappbackend
 
-current ip address = 152.58.58.150
+current ip address of database = 152.58.58.150
 
 
 ayush121
 medibuddyappbackend
+
+
+
+Some changes to be adapted 
+port number = 5000;
+require ke jagah import ka use karna hai .
