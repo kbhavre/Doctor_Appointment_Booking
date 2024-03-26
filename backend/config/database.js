@@ -15,6 +15,7 @@ const dbConnect = ()=>{
     .catch((err)=>{
         console.log("Database Connection refused");
         console.error(err.message);
+        process.exit(1);
     })
 
 }
