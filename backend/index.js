@@ -1,19 +1,27 @@
 import express, { json } from "express";
 import dbConnect from "./config/database.js";
 import dotenv from 'dotenv'
+import cookieParser from "cookie-parser";
+import cors from "cors";
+import authRoute from "./routes/auth.js";
 
 dotenv.config();
-// require("dotenv").config();
 
 const app = express();
+const PORT = process.env.PORT || 4000;
+
+const corsOptions = {
+    origin:true,
+};
+
+//middleware
 app.use(json());
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors(corsOptions));
 
-const PORT = process.env.PORT;
-
-// routing
-// const user = require("./routers/user");
 // mounting
-// app.use("/api/v1" , user);
+app.use("/api/v1/auth" , authRoute);
 
 
 // listening
