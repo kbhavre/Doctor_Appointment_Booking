@@ -96,7 +96,7 @@ export const login = async(req,res)=>{
         const token = generateToken(user);
         const {password, role, appointments , ...rest} = user._doc;
 
-        res.cookie('jwt', token , {httpOnly: true})
+        res.cookie('jwt', token , {httpOnly: true});
 
         res.status(200).json({
             success:true,

@@ -14,3 +14,7 @@ medibuddyappbackend
 Some changes to be adapted 
 port number = 5000;
 require ke jagah import ka use karna hai .
+
+OK
+// 26 March 
+Issue in Role of user (Doctor/Admin)
