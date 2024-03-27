@@ -28,4 +28,12 @@ const reviewSchema = new mongoose.Schema(
     }
 );
 
+reviewSchema.pre(/^find/ , function (next) {
+    this.populate({
+        path:"user",
+        select: "name photo",
+    });
+    next();
+})
+
 export default mongoose.model("Review", reviewSchema);
