@@ -79,7 +79,7 @@ export const getAllDoctors =  async(req,res)=>{
     
     try
     {
-        const{ query } = req.query;
+        const  query  = req.params.input;
         let doctors;
         
         if(query)
