@@ -1,8 +1,7 @@
 import express from "express";
-import {updateDoctor , deleteDocter , getAllDoctors , getSingleDoctor} from "../controllers/doctorController.js"
+import {updateDoctor , deleteDocter , getAllDoctors , getSingleDoctor} from "../Controllers/doctorController.js"
 import { authentication, restrict } from "../auth/verifyToken.js";
 import reviewRouter from "./review.js";
-
 const router = express.Router();
 
 //nested router
