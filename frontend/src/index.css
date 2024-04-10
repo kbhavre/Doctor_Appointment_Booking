@@ -16,6 +16,14 @@
     .btn{
         @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px]
     }
+
+    .btn:hover {
+        /* Hover effect styles */
+        background-color: #3d3b3b; /* Darken the button on hover */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.02); 
+      }
+   
     .heading{
         @apply text-[44px] leading-[54px] font-[700] text-headingColor 
     }
