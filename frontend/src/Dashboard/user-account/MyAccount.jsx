@@ -14,7 +14,7 @@ const MyAccount = () => {
    const [tab,setTab]=useState('booking');
 
    const { data: userData, loading, error } = useFetchData(`${BASE_URL}/users/profile/me`);
-   console.log(userData, "userdata");
+   console.log(userData, "userdata is");
    
    const handleLogout=()=>{
     dispatch({type:"LOGOUT"})
@@ -37,14 +37,16 @@ const MyAccount = () => {
           </div>
           <div className="text-center mt-4">
             <h3 className="text-[18px] leading-[30px] text-headingColor font-bold">
-              Muhibur Rahman
+              {userData.data.name}
             </h3>
             <p className="text-textColor text-[15px] leading-6 font-medium">
-              example@gmail.com
+              {userData.data.email}
             </p>
             <p className="text-textColor text-[15px] leading-6 font-medium ">
               Blood Type:{" "}
-              <span className="ml-2 text-headingColor text-[22px] leading-8">0-</span>
+              <span className="ml-2 text-headingColor text-[22px] leading-8">
+                {userData.data.bloodGroup}
+              </span>
             </p>
           </div>
 
@@ -74,7 +76,7 @@ const MyAccount = () => {
     </button>
   </div>
   {tab === "bookings" && <MyBookings />}
-  {tab === "settings" && <Profile />}
+  {tab === "settings" && <Profile user={userData.data} />}
 </div>
       </div>
         )}
