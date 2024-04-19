@@ -21,7 +21,8 @@ const useFetchData = (url) => {
         if (!res.ok) {
           toast.error(result.message);
         } else {
-          setData(result);
+          setData(result.data);
+         await console.log('data is',data)
         }
       } catch (err) {
         setError(err);
