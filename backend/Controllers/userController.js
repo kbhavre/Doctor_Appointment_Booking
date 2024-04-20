@@ -6,6 +6,7 @@ export const updateUser =  async(req,res)=>{
     
     try
     {
+        
 
         const updateUser = await User.findByIdAndUpdate(id, {$set:req.body}, {new:true});
 
@@ -17,6 +18,7 @@ export const updateUser =  async(req,res)=>{
 
     }catch(err)
     {
+        console.log('error while updatingg user is',err)
         
         res.status(500).json({
             success:false,
@@ -25,6 +27,7 @@ export const updateUser =  async(req,res)=>{
 
     }
 }
+
 
 export const deleteUser =  async(req,res)=>{
     const id = req.params.id;
