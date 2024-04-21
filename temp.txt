@@ -21,3 +21,6 @@ Issue in Role of user (Doctor/Admin)
 
 
 Used cloudinary to handle signup profile pictures
+
+
+stripe integration pending
