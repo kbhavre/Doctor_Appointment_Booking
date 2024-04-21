@@ -24,3 +24,6 @@ Used cloudinary to handle signup profile pictures
 
 
 stripe integration pending
+1. client ---> server ---> api
+2. session create hoga
+3. update Booking Schema and User Schema
