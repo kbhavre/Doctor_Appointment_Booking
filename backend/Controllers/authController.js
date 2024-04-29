@@ -30,7 +30,7 @@ export const register = async (req, res) => {
 
         // If no user found, then hash password
         const salt = await bcrypt.genSalt(10)
-        const hashPassword = await bcrypt.hash(password, salt)
+        const hashPassword = await bcrypt.hash(password, salt);
 
         if (role === 'patient') {
             user = new User({
@@ -42,7 +42,7 @@ export const register = async (req, res) => {
                 role
             })
         }
-        if (role === 'doctor') {
+        else if (role === 'doctor') {
             user = new Doctor({
                 name,
                 email,
@@ -53,12 +53,12 @@ export const register = async (req, res) => {
             })
         }
 
-        const responseDB = await user.save()
+        const responseDB = await user.save();
 
         res.status(200).json({success: true, data:responseDB, message: "User Successfully Created"})
     }
     catch (err) { 
-        res.status(500).json({success: false, message: "Internal server error, Try again"})
+        res.status(500).json({success: false, message: "Internal server error 1212, Try again"})
     }
 };
 
@@ -109,7 +109,6 @@ export const login = async(req,res)=>{
     }catch(err){
         res.status(500).json({success: false, message: "Internal server error, Try again"})
     }
-
 }
 
 
